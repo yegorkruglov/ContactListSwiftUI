@@ -20,11 +20,11 @@ struct ContactDetailsView: View {
                 Spacer()
             }
             HStack {
-                Image(systemName: "phone")
+                Image(systemName: "phone").foregroundColor(Color.accentColor)
                 Text(contact.phone)
             }
             HStack {
-                Image(systemName: "envelope")
+                Image(systemName: "envelope").foregroundColor(Color.accentColor)
                 Text(contact.email)
             }
         }
