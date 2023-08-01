@@ -11,7 +11,24 @@ struct ContactDetailsView: View {
     var contact: Contact
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            HStack {
+                Spacer()
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .frame(width: 240, height: 240, alignment: .center)
+                Spacer()
+            }
+            HStack {
+                Image(systemName: "phone")
+                Text(contact.phone)
+            }
+            HStack {
+                Image(systemName: "envelope")
+                Text(contact.email)
+            }
+        }
+        .navigationTitle(contact.fullName)
     }
 }
 
